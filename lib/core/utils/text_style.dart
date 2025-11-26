@@ -7,7 +7,7 @@ TextStyle getHeadLineTextStyle(
   FontWeight? fontWeight,
 }) {
   return TextStyle(
-    fontFamily: "DM Serif Display",
+    fontFamily: "cairo",
     fontWeight: fontWeight ?? FontWeight.bold,
     fontSize: fontsize ?? 30,
     color: color ?? Theme.of(context).colorScheme.onSurface,
@@ -21,7 +21,7 @@ TextStyle getTitleTextStyle(
   FontWeight? fontWeight,
 }) {
   return TextStyle(
-    fontFamily: "DM Serif Display",
+    fontFamily: "cairo",
     fontWeight: fontWeight ?? FontWeight.bold,
     fontSize: fontsize ?? 20,
     color: color ?? Theme.of(context).colorScheme.onSurface,
@@ -35,7 +35,7 @@ TextStyle getBodyTextStyle(
   FontWeight? fontWeight,
 }) {
   return TextStyle(
-    fontFamily: "DM Serif Display",
+    fontFamily: "cairo",
     fontWeight: fontWeight ?? FontWeight.w600,
     fontSize: fontsize ?? 16,
     color: color ?? Theme.of(context).colorScheme.onSurface,

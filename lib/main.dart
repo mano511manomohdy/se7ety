@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:se7ety/core/services/local_data_helper.dart';
 import 'package:se7ety/features/intro/splash_screen.dart';
 import 'package:se7ety/firebase_options.dart';
@@ -19,8 +20,13 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      locale: Locale('ar'),
-
+      supportedLocales: const [Locale('ar')],
+      locale: const Locale('ar'),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
       home: SplashScreen(),
     );
   }
