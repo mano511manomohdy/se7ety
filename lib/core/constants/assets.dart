@@ -1,5 +1,5 @@
 class AssetsIcons {
-  static const String logo = "assets/images/logo.svg";
+  static const String logo = "assets/images/logo.png";
   static const String welcom = "assets/images/welcome-bg.svg";
   static const String pageview1 = "assets/images/pageview1.svg";
   static const String backGround = "assets/images/bg.svg";

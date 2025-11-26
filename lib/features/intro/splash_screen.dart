@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+// Image.asset is used to show the newly extracted PNG
 import 'package:se7ety/core/constants/assets.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -11,12 +11,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: SvgPicture.asset(AssetsIcons.logo)));
+    return Scaffold(body: Center(child: Image.asset(AssetsIcons.logo)));
   }
 }

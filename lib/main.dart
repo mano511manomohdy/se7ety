@@ -1,7 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:se7ety/core/services/local_data_helper.dart';
-import 'package:se7ety/features/splash/splash_screen.dart';
+import 'package:se7ety/features/intro/splash_screen.dart';
 import 'package:se7ety/firebase_options.dart';
 
 Future<void> main() async {
