@@ -1,8 +1,11 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:se7ety/core/extenstions/navigator.dart';
 import 'package:se7ety/core/utils/app_colors.dart';
 import 'package:se7ety/core/utils/text_style.dart';
+import 'package:se7ety/features/auth/presentation/ui_screens/login.dart';
+import 'package:se7ety/features/auth/presentation/ui_screens/register.dart';
 import 'package:se7ety/features/widgets/custom_button.dart';
 
 class Welcom extends StatefulWidget {
@@ -64,7 +67,7 @@ class _WelcomState extends State<Welcom> {
             child: ClipRRect(
               borderRadius: BorderRadius.circular(20),
               child: BackdropFilter(
-                filter: ImageFilter.blur(sigmaX: 15, sigmaY: 15),
+                filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
                 child: Container(
                   height: h * 0.3,
                   padding: const EdgeInsets.symmetric(
@@ -84,7 +87,7 @@ class _WelcomState extends State<Welcom> {
                   child: Column(
                     children: [
                       Text(
-                        "سجل دلوقتي ك",
+                        "سجل دلوقتي",
                         style: getBodyTextStyle(
                           context,
                           color: AppColors.white,
@@ -96,25 +99,31 @@ class _WelcomState extends State<Welcom> {
 
                       /// --- Doctor Button ---
                       CustomButton(
+                        onPressed: () {
+                          context.pushReplacement(Login());
+                        },
                         fixedSize: Size(w, 55),
-                        text: "دكتور",
+                        text: "تسجيل دخول",
                         style: getBodyTextStyle(
                           context,
                           color: AppColors.white,
                         ),
-                        bgColor: Colors.white,
+                        bgColor: AppColors.primaryColor.withOpacity(0.25),
                       ),
                       const Gap(10),
 
                       /// --- Patient Button ---
                       CustomButton(
+                        onPressed: () {
+                          context.pushReplacement(Register());
+                        },
                         fixedSize: Size(w, 55),
-                        text: "مريض",
+                        text: "إنشاء حساب",
                         style: getBodyTextStyle(
                           context,
                           color: AppColors.white,
                         ),
-                        bgColor: Colors.white,
+                        bgColor: AppColors.primaryColor.withOpacity(0.25),
                       ),
                     ],
                   ),
