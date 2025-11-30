@@ -89,7 +89,7 @@ class _OnBoardingState extends State<OnBoarding> {
                   SmoothPageIndicator(
                     controller: controller,
                     count: pages.length,
-                    effect: WormEffect(
+                    effect: JumpingDotEffect(
                       dotColor: AppColors.grey,
                       dotHeight: 8,
                       dotWidth: 16,
